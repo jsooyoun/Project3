@@ -1,0 +1,273 @@
+body {
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
+tr:nth-child(even){
+    background-color: #f9f9f9; 
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
+
+#individual-results .athlete:nth-child(even) {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+        
+ #individual-results .athlete:nth-child(odd) {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+header h2:first-of-type {
+    margin-top: calc(15vh + 10px); /* 10vh for the height of the viewport */
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    grid-column: 1/-1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: pink;
+}
+
+nav{
+    display:block;
+    margin:10px;
+}
+
+main#main{
+    margin:10px;
+}
+
+nav{
+    border: 1px solid #ccc; 
+    background-color: #f9f9f9;
+}
+
+#summary {
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    background-color: #ffffff; /* Light grey */
+}
+
+#team-results{
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+}
+
+#individual-results {
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    background-color: #ffffff; 
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#individual-results img{
+    width: 100px; /* Ensure images fill the grid cell */
+    height: 100px; /* Ensure images fill the grid cell */
+    border: 1px solid #ccc; /* Light grey border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+#gallery {
+    display: none;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; 
+    max-width: 100%;
+}
+
+
+
+h1{
+    position: fixed;
+    text-align: center;
+    top: 0; 
+    width: 100%;
+    background-color: #f9f9f9; 
+    border-bottom: 1px solid #ccc;
+    z-index: 1000; 
+}
+
+
+figcaption{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+dd{
+    margin-inline-start: 0;
+    margin-bottom: 10px;
+}
+
+dt {
+    font-weight: bold; /* Optional styling */
+}
+
+
+#toggleGallery {
+    display: block;
+    width: 100%;      /* Make the button a block element */
+    margin: 5% auto;      /* Center it horizontally */
+    font-size: 16px;     /* Increase font size */
+    cursor: pointer;      /* Change cursor to pointer */
+}
+
+section {
+    padding: 20px;
+    margin: 15px 0;
+
+
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Transition for fading */
+
+}
+
+section.visible {
+    opacity: 1; /* Fully visible when the class is added */
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+@media (prefers-reduced-motion) {
+    button {
+        transition: none; /* Disable transition */
+    }
+
+    button:active {
+        transform: none; /* Remove scaling effect */
+    }
+}
+
+@media (max-width: 600px) {
+    .athlete {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+}
+
+footer{
+    background-color: #f9f9f9;
+}
+
+footer p, address, a{
+margin-left: 10px ;
+
+}
+
+
+h1.dark-mode{ 
+    background-color: #121212;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+header.dark-mode {
+    background-color: #1e1e1e; /* Dark mode header */
+}
+
+th.dark-mode {
+    background-color: #333; /* Dark mode table header */
+}
+
+#team-results.dark-mode {
+    border: 1px solid #444; /* Dark mode border */
+    background-color: #1e1e1e; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+#team-results.dark-mode th {
+    background-color: #333; /* Dark mode table header */
+}
+
+#team-results.dark-mode td {
+    background-color: #2a2a2a; /* Dark mode table cells */
+}
+
+#individual-results.dark-mode {
+    border: 1px solid #444; /* Dark mode border */
+    background-color: #1e1e1e; /* Dark mode background */
+    color: white; /* Dark mode text color */
+}
+
+#individual-results.dark-mode .athlete {
+    background-color: #2a2a2a; 
+    color: white; 
+}
+
+#individual-results.dark-mode th {
+    background-color: #333; 
+    color: white; 
+}
+
+#individual-results.dark-mode td {
+    background-color: #2a2a2a; 
+    color: white; 
+}
+
+footer.dark-mode {
+    background-color:#2a2a2a; 
+}
+
+footer a {
+    color: blue; /* Light mode link color */
+}
+
+footer.dark-mode a {
+    color: lightblue; /* Dark mode link color */
+}
+
+nav.dark-mode, 
+#summary.dark-mode, 
+#team-results.dark-mode, 
+#individual-results.dark-mode {
+    border: 1px solid #444; /* Dark mode border */
+    background-color: #1e1e1e; /* Dark mode background */
+}
+
+
+
+
+
+
+
+
